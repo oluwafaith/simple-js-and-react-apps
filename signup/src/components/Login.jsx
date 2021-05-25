@@ -1,25 +1,38 @@
 import { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import "./login.css";
 function Login() {
-  const [data, setData] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleValue = (e) => {
-    e.target.value();
-  };
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("clicked");
   };
   return (
     <div className="container">
-      <h1>Create An Account</h1>
-      
-      <input type="text" onChange={handleValue} placeholder="email address" />
-      <input type="text" onChange={handleValue} placeholder="password" />
+      <h1>Login to your account</h1>
+
+      <input
+        type="text"
+        value={email}
+        onChange={({ target }) => setEmail(target.value)}
+        placeholder="email address"
+      />
+      <input
+        type="password"
+        value={password}
+        onChange={({ target }) => setPassword(target.value)}
+        placeholder="password"
+      />
       <button type="submit" onClick={handleSubmit}>
-         Login
+        Login
       </button>
-      <p>Don't Have An Account? Sign Up</p>
+      <p>
+        Don't Have An Account?
+        <Link to="./signup">Sign up</Link>
+      </p>
     </div>
   );
 }

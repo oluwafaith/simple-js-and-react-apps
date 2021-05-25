@@ -1,10 +1,37 @@
-import React from "react"
-import Signup from "./components/Signup";
+import { lazy, Suspense } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+
+
+const SignUp = lazy(() => import("./components/Signup"));
+const Login = lazy(() => import("./components/Login"));
+
 function App() {
   return (
-    <div className="app">
-      <Signup />
-    </div>
+    <Router>
+      <Switch>
+        <Suspense fallback="......Loading">
+          <Route
+            exact
+            path="/signup"
+            render={() => {
+              return <SignUp />;
+            }}
+          />
+          <Route
+            exact
+            path="/login"
+            render={() => {
+              return <Login />;
+            }}
+          />
+        </Suspense>
+      </Switch>
+    </Router>
   );
 }
 

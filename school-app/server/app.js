@@ -60,9 +60,9 @@ app.use(function(err, req, res, next) {
 });
 
 
-const PORT = 5000;
+// const PORT = 5000;
 
-app.listen(PORT, () => {
-  console.log(`Running on PORT ${PORT}`);
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Running on PORT `);
 })
 export default app;

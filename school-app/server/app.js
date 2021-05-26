@@ -18,6 +18,7 @@ import indexRouter from './routes/index';
 import usersRouter from './routes/users';
 
 const app = express();
+const __dirname = path.resolve();
 
 app.use(cors({
   "origin": "*",
@@ -26,8 +27,8 @@ app.use(cors({
   "optionsSuccessStatus": 204
 }))
 // view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());

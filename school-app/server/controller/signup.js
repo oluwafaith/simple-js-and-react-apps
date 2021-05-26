@@ -1,5 +1,5 @@
 import sql from "../database/postgres";
-import signupSchema from "../utilities/user"
+import { signupSchema } from "../utilities/user"
 import bcrypt from "bcrypt"
 import randomstring from "randomstring";
 import nodemailer from "nodemailer";

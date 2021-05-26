@@ -9,17 +9,17 @@ function Signup() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
      
-  Axios.defaults.withCredentials = true;
   
     const handleSubmit = (e) => {
         e.preventDefault()
       console.log('clicked', email, password);
       
-        Axios.post("http://localhost:5000/user", {
+      Axios.post("https://schoolserverapp.herokuapp.com/users", {
           email: email,
           password: password,
         }).then((response) => {
           console.log(response);
+          window.location.replace("/login");
         });
         
     }

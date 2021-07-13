@@ -1,6 +1,6 @@
-.container {
+.containerLogin {
     background: white;
-    width: 30vw;
+    width: 100%;
     height: 50vh;
     display: grid;
     justify-content: center;
@@ -8,9 +8,10 @@
     border: 1px solid white;
     border-radius: 25px;
 }
-button{
-    color:white;
-    background:  rgba(132, 199, 174, 1);
+
+button {
+    color: white;
+    background: rgba(132, 199, 174, 1);
 
     width: 50%;
     height: 40px;
@@ -20,14 +21,15 @@ button{
     cursor: pointer;
 }
 
-input{
-height: 30px;
-border: 1px solid #E5E5E5;
-border-radius: 10px;
-cursor: pointer;
+input {
+    height: 30px;
+    border: 1px solid #E5E5E5;
+    border-radius: 10px;
+    cursor: pointer;
 }
-input::placeholder{
-    color:rgba(0, 0, 0, 0.5);
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
     margin-left: 0 auto;
     margin-right: 0 auto;
 

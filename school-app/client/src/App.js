@@ -7,9 +7,10 @@ import {
 } from "react-router-dom";
 
 
-const SignUp = lazy(() => import("./components/Signup"));
-const Login = lazy(() => import("./components/Login"));
-
+const SignUp = lazy(() => import("./pages/signup/index"));
+const Login = lazy(() => import("./pages/login/Login"));
+const Dashboard = lazy(()=> import("./pages/dashboard/Dashboard"))
+const LandingPage = lazy(()=> import("./pages/landingPage/LandingPage"))
 function App() {
   return (
     <Router>
@@ -27,6 +28,20 @@ function App() {
             path="/login"
             render={() => {
               return <Login />;
+            }}
+          />
+          <Route
+            exact
+            path="/dashboard"
+            render={() => {
+              return <Dashboard />;
+            }}
+          />
+          <Route
+            exact
+            path="/"
+            render={() => {
+              return <LandingPage />;
             }}
           />
         </Suspense>

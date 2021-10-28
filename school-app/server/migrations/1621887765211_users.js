@@ -5,6 +5,14 @@ exports.shorthands = undefined;
 exports.up = async (pgm) => {
     pgm.createTable("users", {
         id: "id",
+        firstname: {
+            type: "varchar(1000)",
+            notNull: true,
+        },
+        lastname: {
+            type: "varchar(1000)",
+            notNull: true,
+        },
         email: {
             type: "varchar(1000)",
             notNull: true,

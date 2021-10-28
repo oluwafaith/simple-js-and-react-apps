@@ -1,0 +1,28 @@
+.main-footer {
+    color: white;
+    background-color: #2a4c31;
+    padding-top: 2px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footerContainer{
+padding: 10px;
+}
+.row{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-items: center;
+      
+}
+.row-sm{
+    display: flex;
+    justify-content: center;
+}
+.col-sm{
+    font-size: medium;
+}
+.list-unstyled{
+list-style-type: none;
+margin-left: -35px;
+}

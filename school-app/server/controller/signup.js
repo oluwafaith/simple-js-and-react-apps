@@ -11,7 +11,7 @@ export async function signup(data) {
         throw error
     }
 
-    const { email, password } = value;
+    const { firstname, lastname, email, password } = value;
     const userExists = await sql`SELECT * FROM users WHERE email = ${email}`;
     
      if (userExists[0]) {
@@ -55,7 +55,7 @@ export async function signup(data) {
         return log("Email sent!!!");
       });
         
-         const user = await sql`INSERT into users ( email, password, user_token, is_active ) VALUES( ${email},  ${hash}, ${secretToken}, ${false}) RETURNING *`;
+         const user = await sql`INSERT into users ( firstname, lastname, email, password, user_token, is_active ) VALUES( ${firstname}, ${lastname}, ${hash}, ${secretToken}, ${false}) RETURNING *`;
          return user;
     })
 }

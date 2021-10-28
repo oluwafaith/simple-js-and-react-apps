@@ -25,7 +25,6 @@ function Login() {
   };
   return (
     <>
-      <Header />
       <div className="containerLogin">
         <h1>Login to your account</h1>
 

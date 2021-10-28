@@ -5,7 +5,8 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-
+import Header from "./components/header"
+import Footer from "./components/footer/Footer"
 
 const SignUp = lazy(() => import("./pages/signup/index"));
 const Login = lazy(() => import("./pages/login/Login"));
@@ -13,7 +14,9 @@ const Dashboard = lazy(()=> import("./pages/dashboard/Dashboard"))
 const LandingPage = lazy(()=> import("./pages/landingPage/LandingPage"))
 function App() {
   return (
+    <>
     <Router>
+      <Header />
       <Switch>
         <Suspense fallback="......Loading">
           <Route
@@ -46,7 +49,9 @@ function App() {
           />
         </Suspense>
       </Switch>
-    </Router>
+      </Router>
+      <Footer />
+      </>
   );
 }
 

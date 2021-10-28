@@ -55,7 +55,7 @@ function Signup() {
 
         <p>
           Already Have An Account?
-          <Link to="./login">Login</Link>
+          <Link to="./login" style={{color: "black"}}> Login</Link>
         </p>
       </div>
     </>

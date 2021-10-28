@@ -13,19 +13,20 @@ function CarouselStyle() {
             stopOnHover
             useKeyboardArrows
             transitionTime="500"
+            showThumbs={false}
             style={{ height:"50px" }}
         >
           <div >
             <img src="https://res.cloudinary.com/dhtxiw89g/image/upload/v1591814459/deluxe-balcony_2.png" />
-            <p className="legend">Legend 1</p>
+            {/* <p className="legend">Legend 1</p> */}
           </div>
           <div>
             <img src="https://res.cloudinary.com/dhtxiw89g/image/upload/v1591814458/garden-loft_1.png" />
-            <p className="legend">Legend 2</p>
+            {/* <p className="legend">Legend 2</p> */}
           </div>
           <div>
             <img src="https://res.cloudinary.com/dhtxiw89g/image/upload/v1591814458/garden-loft_2.png" />
-            <p className="legend">Legend 3</p>
+            {/* <p className="legend">Legend 3</p> */}
           </div>
         </Carousel>
     
